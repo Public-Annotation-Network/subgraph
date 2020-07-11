@@ -18,7 +18,7 @@ dataSources:
         - CID
       abis:
         - name: CIDRegistry
-          file: ./abis/CIDRegistry.json
+          file: ./build/contracts/CIDRegistry.json
       callHandlers:
       - function: storeCID(bytes32)
         handler: handleStoreCID
