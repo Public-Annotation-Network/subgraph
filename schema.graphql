@@ -1,4 +1,10 @@
-type CID @entity {
+type Annotation @entity {
   id: ID!
-  cid: Bytes!
+  cid: String!
+  batchCID: String!
+}
+
+type AnnotationBatch @entity {
+  id: ID!
+  cid: String!
 }

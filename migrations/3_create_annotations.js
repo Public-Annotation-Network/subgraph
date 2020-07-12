@@ -5,7 +5,7 @@ module.exports = async function(deployer) {
   
   const cidRegistry = await CIDRegistry.deployed();
 
-  const tx = await cidRegistry.storeCID(web3.utils.toHex('TEST'), {
+  const tx = await cidRegistry.storeCID('QmY7Yh4UquoXHLPFo2XbhXkhBvFoPwmQUSa92pxnxjQuPU', {
     from: accounts[0]
   });
 

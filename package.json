@@ -9,7 +9,8 @@
     "codegen": "graph codegen",
     "deploy": "graph deploy public-annotation-network/subgraph --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-local": "graph deploy public-annotation-network/subgraph --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
-    "migrate:rinkeby": "truffle migrate --network rinkeby"
+    "migrate:rinkeby": "truffle migrate --network rinkeby",
+    "migrate:ropsten": "truffle migrate --network ropsten"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.18.0",

@@ -1,10 +1,10 @@
 //SPDX-License-Identifier: Unlicense
-pragma solidity ^0.6.8;
+pragma solidity ^0.6.11;
 
 
 contract CIDRegistry {
 
-  function storeCID(bytes32 cid) public returns (bool) {
+  function storeCID(string calldata cid) public returns (bool) {
     return true;
   }
 }

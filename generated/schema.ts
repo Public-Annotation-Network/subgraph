@@ -12,7 +12,7 @@ import {
   BigDecimal
 } from "@graphprotocol/graph-ts";
 
-export class CID extends Entity {
+export class Annotation extends Entity {
   constructor(id: string) {
     super();
     this.set("id", Value.fromString(id));
@@ -20,17 +20,17 @@ export class CID extends Entity {
 
   save(): void {
     let id = this.get("id");
-    assert(id !== null, "Cannot save CID entity without an ID");
+    assert(id !== null, "Cannot save Annotation entity without an ID");
     assert(
       id.kind == ValueKind.STRING,
-      "Cannot save CID entity with non-string ID. " +
+      "Cannot save Annotation entity with non-string ID. " +
         'Considering using .toHex() to convert the "id" to a string.'
     );
-    store.set("CID", id.toString(), this);
+    store.set("Annotation", id.toString(), this);
   }
 
-  static load(id: string): CID | null {
-    return store.get("CID", id) as CID | null;
+  static load(id: string): Annotation | null {
+    return store.get("Annotation", id) as Annotation | null;
   }
 
   get id(): string {
@@ -42,12 +42,61 @@ export class CID extends Entity {
     this.set("id", Value.fromString(value));
   }
 
-  get cid(): Bytes {
+  get cid(): string {
     let value = this.get("cid");
-    return value.toBytes();
+    return value.toString();
   }
 
-  set cid(value: Bytes) {
-    this.set("cid", Value.fromBytes(value));
+  set cid(value: string) {
+    this.set("cid", Value.fromString(value));
+  }
+
+  get batchCID(): string {
+    let value = this.get("batchCID");
+    return value.toString();
+  }
+
+  set batchCID(value: string) {
+    this.set("batchCID", Value.fromString(value));
+  }
+}
+
+export class AnnotationBatch extends Entity {
+  constructor(id: string) {
+    super();
+    this.set("id", Value.fromString(id));
+  }
+
+  save(): void {
+    let id = this.get("id");
+    assert(id !== null, "Cannot save AnnotationBatch entity without an ID");
+    assert(
+      id.kind == ValueKind.STRING,
+      "Cannot save AnnotationBatch entity with non-string ID. " +
+        'Considering using .toHex() to convert the "id" to a string.'
+    );
+    store.set("AnnotationBatch", id.toString(), this);
+  }
+
+  static load(id: string): AnnotationBatch | null {
+    return store.get("AnnotationBatch", id) as AnnotationBatch | null;
+  }
+
+  get id(): string {
+    let value = this.get("id");
+    return value.toString();
+  }
+
+  set id(value: string) {
+    this.set("id", Value.fromString(value));
+  }
+
+  get cid(): string {
+    let value = this.get("cid");
+    return value.toString();
+  }
+
+  set cid(value: string) {
+    this.set("cid", Value.fromString(value));
   }
 }
