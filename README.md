@@ -1,3 +1,3 @@
-# Example Subgraph
+# Public Annotation Network Subgraph
 
-An example to help you get started with The Graph. For more information see the docs on https://thegraph.com/docs/.
+https://thegraph.com/explorer/subgraph/public-annotation-network/subgraph
