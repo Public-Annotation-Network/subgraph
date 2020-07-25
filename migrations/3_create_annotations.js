@@ -5,7 +5,7 @@ module.exports = async function(deployer) {
   
   const cidRegistry = await CIDRegistry.deployed();
 
-  const tx = await cidRegistry.storeCID('QmY7Yh4UquoXHLPFo2XbhXkhBvFoPwmQUSa92pxnxjQuPU', {
+  const tx = await cidRegistry.storeCID('QmQusfC3i7jaJzw7D3mabfe6Zdc8bMZ6cTTns7UC4Fstvw', {
     from: accounts[0]
   });
 

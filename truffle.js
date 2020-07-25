@@ -30,6 +30,7 @@ module.exports = {
         )
       },
       network_id: '3',
+      gasPrice: '201000000000',
       skipDryRun: true
     }
   },
