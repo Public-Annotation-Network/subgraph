@@ -1,6 +1,6 @@
 # Public Annotation Network Subgraph
 
-GraphQL Endpoint: https://thegraph.com/explorer/subgraph/public-annotation-network/subgraph
+Explorer: https://thegraph.com/explorer/subgraph/public-annotation-network/subgraph
 
 ## Development
 ```sh
