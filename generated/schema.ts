@@ -51,6 +51,15 @@ export class Annotation extends Entity {
     this.set("cid", Value.fromString(value));
   }
 
+  get ref(): string {
+    let value = this.get("ref");
+    return value.toString();
+  }
+
+  set ref(value: string) {
+    this.set("ref", Value.fromString(value));
+  }
+
   get batchCID(): string {
     let value = this.get("batchCID");
     return value.toString();

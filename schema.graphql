@@ -1,6 +1,22 @@
+type _Schema_
+  @fulltext(
+    name: "refSearch",
+    language: en
+    algorithm: rank,
+    include: [
+      {
+        entity: "Annotation",
+        fields: [
+          { name: "ref" }
+        ]
+      }
+    ]
+  )
+
 type Annotation @entity {
   id: ID!
   cid: String!
+  ref: String!
   batchCID: String!
 }
 
